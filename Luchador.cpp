@@ -71,4 +71,8 @@ int Luchador::ataqueMagico(){
 	return 0;
 }
 
+void Luchador::defensa(double defensa){
+
+}
+
 
