@@ -47,7 +47,7 @@ class Luchador{
 		virtual int ataqueMagico();
 
 		virtual void defensa(double);
-		//virtual void habilidad();
+		virtual void habilidad();
 
 };
 

@@ -75,4 +75,6 @@ void Luchador::defensa(double defensa){
 
 }
 
+void Luchador::habilidad(){
 
+}

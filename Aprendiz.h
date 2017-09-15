@@ -6,7 +6,12 @@ class Aprendiz : public Luchador{
 
 	public:
 		Aprendiz(string);
+		
+		int ataqueFisico();
+		int ataqueMagico();
 
+		void defensa(double);
+		void habilidad();
 };
 
 
