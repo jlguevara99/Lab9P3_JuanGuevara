@@ -7,7 +7,7 @@ Alquimista::Alquimista(string nom){
 	defensaFisica = 0.20;
 	expNecesaria = 300;
 	expEntregada = 100;
-	xp = 0;
+	xp = 300;
 	Dmag = 'f';
 	Dfis = 'f';
 }

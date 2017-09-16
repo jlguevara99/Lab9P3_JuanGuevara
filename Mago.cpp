@@ -7,7 +7,7 @@ Mago::Mago(string nom){
 	defensaFisica = 0;
 	expNecesaria = 200;
 	expEntregada = 75;
-	xp = 0;
+	xp = 200;
 	Dmag = 'f';
 	Dfis = 'f';
 }

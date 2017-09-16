@@ -3,7 +3,7 @@
 Aprendiz::Aprendiz(string p){
 	nombre = p;
 	hp = 60;
-	xp = 0;
+	xp = 400;
 	defensaMagica = 0;
 	defensaFisica = 0.10;
 	expNecesaria = 400;

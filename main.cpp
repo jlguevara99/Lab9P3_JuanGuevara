@@ -109,6 +109,11 @@ int main(){
 			int jugada = 1;
 			int defaultLife1 = lista.get(tam,primerJ)->getHp();
 			int defaultLife2 = lista.get(tam,segundoJ)->getHp();
+			ofstream writeFile("turnos.txt",ios::app);
+			string nombre1 =lista.get(tam,primerJ)->getNombre();
+			string nombre2 = lista.get(tam,segundoJ)->getNombre();
+			writeFile<<"NUEVO JUEGO: ";
+			writeFile<<nombre1<< " vs " <<nombre2<<"\n";
 
 			do {
 				cout<<endl;
@@ -141,6 +146,11 @@ int main(){
 							lista.get(tam,segundoJ)->setdmag('f');
 							lista.get(tam,segundoJ)->setdfis('f');
 							jugada = 2;	
+
+							writeFile<<nombre1;
+							writeFile<<": ataque magico\n";
+
+
 						}else{
 							cout<<"No tene ataque magico, pruebe de nuevo"<<endl;
 						}
@@ -156,12 +166,19 @@ int main(){
 							lista.get(tam,segundoJ)->setdmag('f');
 							lista.get(tam,segundoJ)->setdfis('f');
 							jugada = 2;
+
+							writeFile<<nombre1;
+							writeFile<<": ataque fisico\n";
+
 						}else{
 							cout<<"No tiene ataque fisico, pruebe de nuevo"<<endl;
 						}
 					}else if(primerTurno == 3){
 						lista.get(tam,primerJ)->defensa();
 						cout<<"La defensa del jugador 1 se ha activado"<<endl;
+						jugada = 2;
+						writeFile<<nombre1;
+						writeFile<<": defensa activada\n";
 					}else if(primerTurno == 4){
 
 					}
@@ -191,6 +208,9 @@ int main(){
 							lista.get(tam,primerJ)->setdmag('f');
 							lista.get(tam,primerJ)->setdfis('f');
 							jugada = 1;
+							
+							writeFile<<nombre2;
+							writeFile<<" : ataque magico\n";
 
 						}else{
 							cout<<"No tiene ataque magico, pruebe de nuevo"<<endl;
@@ -207,30 +227,45 @@ int main(){
 							lista.get(tam,primerJ)->setdmag('f');
 							lista.get(tam,primerJ)->setdfis('f');
 							jugada = 1;
+
+							writeFile<<nombre2;
+							writeFile<<" : ataque fisico\n";
+
 						}else{
 							cout<<"No tiene ataque fisico"<<endl;
 						}
 					}else if(segundoTurno == 3){
 						lista.get(tam,segundoJ)->defensa();
+						cout<<"El jugador 2 activo su defensa"<<endl;
+						jugada = 1;
+						writeFile<<nombre2;
+						writeFile<<" : defensa activada\n ";
 					}else if(segundoTurno == 4){
 
 					}
 				}
 				if(lista.get(tam,primerJ)->getHp() <= 0){
 					terminar = false;
-					gana1 = 1;
+					gana2 = 1;
 				}
 				if(lista.get(tam,segundoJ)->getHp() <= 0){
 					terminar = false;
-					gana2 = 0;
+					gana1 = 1;
 				}
 			} while (terminar);
 
 			if(gana1 == 1){
+				writeFile<<"Ha ganado: ";
+				writeFile<<nombre1<<"\n";
+				writeFile<<"\n";
+
 				cout<<"Ha ganado el jugador 1"<<endl;
 				int exp = lista.get(tam,primerJ)->getXP()+lista.get(tam,primerJ)->getXPE();
 				lista.get(tam,primerJ)->setXP(exp);
-			}else if(gana2 == 2){
+			}else if(gana2 == 1){
+				writeFile<<"Ha ganado: ";
+				writeFile<<nombre2<<"\n";
+				writeFile<<"\n";
 				cout<<"Ha ganado el jugador 2"<<endl;
 				int exp = lista.get(tam,segundoJ)->getXP()+lista.get(tam,segundoJ)->getXPE();
 				lista.get(tam,primerJ)->setXPE(exp);
@@ -239,6 +274,9 @@ int main(){
 			lista.get(tam,primerJ)->setHp(defaultLife1);
 			lista.get(tam,segundoJ)->setHp(defaultLife2);
 			cout<<endl;
+
+
+			writeFile.close();
 
 		//fin del juego
 

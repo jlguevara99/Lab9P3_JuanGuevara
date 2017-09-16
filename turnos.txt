@@ -1,0 +1,21 @@
+NUEVO JUEGO: Juan vs Ana
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ana : ataque magico
+Juan: ataque magico
+Ha ganado: Juan
+
+

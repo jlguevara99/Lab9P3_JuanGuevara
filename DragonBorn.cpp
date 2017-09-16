@@ -4,7 +4,7 @@ DragonBorn::DragonBorn(string nom){
 	nombre = nom;
 	hp = 200;
 
-	xp = 0;
+	xp = 404040400;
 	defensaMagica = 0.20;
 	defensaFisica = 0.20;
 	expNecesaria = 400;
