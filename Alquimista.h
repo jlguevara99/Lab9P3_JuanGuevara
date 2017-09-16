@@ -6,7 +6,12 @@
 class Alquimista : public Luchador{
 	public: 
 		Alquimista(string);
+		
+		int ataqueFisico();
+		int ataqueMagico();
 
+		void defensa();
+		void habilidad();
 
 };
 

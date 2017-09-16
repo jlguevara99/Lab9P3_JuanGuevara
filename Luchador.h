@@ -12,7 +12,8 @@ class Luchador{
 		int batallas;
 		vector<string> clases;
 		int xp;
-
+		char Dmag;
+		char Dfis;
 
 		//cosas
 		int hp;
@@ -35,18 +36,27 @@ class Luchador{
 		void setXP(int);
 
 		//cosas
+		char getdmag();
+		char getdfis();
+
+		void setdmag(char);
+		void setdfis(char);
+
 
 		int getHp();
 		double getdefensaM();
 		double getdefensaF();
 		int getXPN();
+		
 		int getXPE();
+		void setXPE(int);
+		void setHp(int);
 
 		//funciones 
 		virtual int ataqueFisico();
 		virtual int ataqueMagico();
 
-		virtual void defensa(double);
+		virtual void defensa();
 		virtual void habilidad();
 
 };

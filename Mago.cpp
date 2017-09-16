@@ -8,4 +8,23 @@ Mago::Mago(string nom){
 	expNecesaria = 200;
 	expEntregada = 75;
 	xp = 0;
+	Dmag = 'f';
+	Dfis = 'f';
+}
+
+int Mago::ataqueFisico(){
+	return 0;
+}
+
+int Mago::ataqueMagico(){
+	return 15;
+}
+
+void Mago::defensa(){
+	hp += hp*0.45;
+	Dmag = 'v';
+}
+
+void Mago::habilidad(){
+
 }

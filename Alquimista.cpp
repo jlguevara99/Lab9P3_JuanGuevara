@@ -8,4 +8,24 @@ Alquimista::Alquimista(string nom){
 	expNecesaria = 300;
 	expEntregada = 100;
 	xp = 0;
+	Dmag = 'f';
+	Dfis = 'f';
+}
+
+int Alquimista::ataqueFisico(){
+	return 10;
+}
+
+int Alquimista::ataqueMagico(){
+	return 10;
+}
+
+void Alquimista::defensa(){
+	hp += hp*0.45;
+	Dmag = 'v';
+	Dfis = 'v';
+}
+
+void Alquimista::habilidad(){
+
 }

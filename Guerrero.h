@@ -5,6 +5,12 @@
 class Guerrero : public Luchador{
 	public:
 		Guerrero(string);
+
+		int ataqueFisico();
+		int ataqueMagico();
+
+		void defensa();
+		void habilidad();
 };
 
 

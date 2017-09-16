@@ -5,6 +5,9 @@ Luchador::Luchador(){
 	batallas = 2;
 
 }
+void Luchador::setXPE(int xpx){
+	expEntregada = xpx;
+}
 
 string Luchador::getNombre(){
 	return nombre;
@@ -42,12 +45,10 @@ int Luchador::getHp(){
 	return hp;
 }
 
-/*int Luchador::getAtaqueM(){
-	return ataqueMagico;
+void Luchador::setHp(int pHp){
+	hp = pHp;
 }
-int Luchador::getAtaqueF(){
-	return ataqueFisico;
-}*/
+
 double Luchador::getdefensaM(){
 	return defensaMagica;
 }
@@ -71,10 +72,26 @@ int Luchador::ataqueMagico(){
 	return 0;
 }
 
-void Luchador::defensa(double defensa){
+void Luchador::defensa(){
 
 }
 
 void Luchador::habilidad(){
 
+}
+
+char Luchador::getdmag(){
+	return Dmag;
+}
+
+char Luchador::getdfis(){
+	return Dfis;
+}
+
+void Luchador::setdmag(char bandera){
+	Dmag = bandera;
+}
+
+void Luchador::setdfis(char bandera){
+	Dfis = bandera;
 }

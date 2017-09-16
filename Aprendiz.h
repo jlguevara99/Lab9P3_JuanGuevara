@@ -10,7 +10,7 @@ class Aprendiz : public Luchador{
 		int ataqueFisico();
 		int ataqueMagico();
 
-		void defensa(double);
+		void defensa();
 		void habilidad();
 };
 

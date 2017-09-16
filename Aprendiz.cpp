@@ -8,6 +8,8 @@ Aprendiz::Aprendiz(string p){
 	defensaFisica = 0.10;
 	expNecesaria = 400;
 	expEntregada = 25;
+	Dmag = 'f';
+	Dfis = 'f';
 }
 
 int Aprendiz::ataqueFisico(){
@@ -18,8 +20,9 @@ int Aprendiz::ataqueMagico(){
 	return 0;
 }
 
-void Aprendiz::defensa(double def){
+void Aprendiz::defensa(){
 	hp += hp*0.45;
+	Dfis = 'v';
 }
 
 void Aprendiz::habilidad(){

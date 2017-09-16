@@ -6,5 +6,11 @@
 class DragonBorn : public Luchador{
 	public:
 		DragonBorn(string);
+
+		int ataqueFisico();
+		int ataqueMagico();
+
+		void defensa();
+		void habilidad();
 };
 #endif

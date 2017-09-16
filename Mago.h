@@ -6,6 +6,12 @@
 class Mago : public Luchador{
 	public:
 		Mago(string);
+
+		int ataqueFisico();
+		int ataqueMagico();
+
+		void defensa();
+		void habilidad();
 };
 
 

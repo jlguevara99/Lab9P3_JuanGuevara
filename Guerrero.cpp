@@ -8,5 +8,23 @@ Guerrero::Guerrero(string nom){
 	expNecesaria = 0;
 	expEntregada = 75;
 	xp = 0;
+	Dmag = 'f';
+	Dfis = 'f';
 }
-	
+
+int Guerrero::ataqueFisico(){
+	return 15;
+}
+
+int Guerrero::ataqueMagico(){
+	return 0;
+}
+
+void Guerrero::defensa(){
+	hp += hp*0.45;
+	Dfis = 'v';
+}
+
+void Guerrero::habilidad(){
+
+}
