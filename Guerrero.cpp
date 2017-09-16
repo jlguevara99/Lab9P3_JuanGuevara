@@ -26,5 +26,5 @@ void Guerrero::defensa(){
 }
 
 void Guerrero::habilidad(){
-
+	hp = hp+40;
 }

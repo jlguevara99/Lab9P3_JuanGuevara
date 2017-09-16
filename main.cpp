@@ -180,7 +180,10 @@ int main(){
 						writeFile<<nombre1;
 						writeFile<<": defensa activada\n";
 					}else if(primerTurno == 4){
-
+						lista.get(tam,primerJ)->habilidad();
+						writeFile<<nombre1;
+						writeFile<<": habilidad activada\n";
+						cout<<"el jugador 1 activo si habilidad"<<endl;
 					}
 				//turno 2
 				}else if(jugada == 2){
@@ -241,7 +244,9 @@ int main(){
 						writeFile<<nombre2;
 						writeFile<<" : defensa activada\n ";
 					}else if(segundoTurno == 4){
-
+						lista.get(tam,segundoJ)->habilidad();
+						writeFile<<nombre2;
+						writeFile<<" : habilidad activada\n";
 					}
 				}
 				if(lista.get(tam,primerJ)->getHp() <= 0){
